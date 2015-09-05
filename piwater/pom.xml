@@ -25,6 +25,45 @@
 						<target>1.6</target>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>2.1</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>shade</goal>
+							</goals>
+							<configuration>
+								<filters>
+									<filter>
+										<artifact>*:*</artifact>
+										<excludes>
+											<exclude>**/*.DSA</exclude>
+											<exclude>**/*.RSA</exclude>
+											<exclude>**/*.SF</exclude>
+										</excludes>
+									</filter>
+								</filters>
+								<transformers>
+									<transformer
+										implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+									<transformer
+										implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+										<resource>META-INF/services/com.sun.tools.xjc.Plugin</resource>
+									</transformer>
+								</transformers>
+							</configuration>
+						</execution>
+					</executions>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.cxf.build-utils</groupId>
+							<artifactId>cxf-buildtools</artifactId>
+							<version>3.0.0</version>
+						</dependency>
+					</dependencies>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
