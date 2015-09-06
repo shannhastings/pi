@@ -44,11 +44,30 @@ public class MotorController {
 		
 		motor1.configureMotor(Motor.FORWARD, 25);
 		System.out.println(motor1);
+		motor1.faster();
+		System.out.println(motor1);
+		motor1.faster();
+		System.out.println(motor1);
+		motor1.slower();
+		System.out.println(motor1);
+		motor1.slower();
+		System.out.println(motor1);
 		motor1.configureMotor(Motor.FORWARD, 50);
 		System.out.println(motor1);
 		motor1.configureMotor(Motor.FORWARD, 100);
 		System.out.println(motor1);
 		motor1.configureMotor(Motor.FORWARD, 0);
+		System.out.println(motor1);
+		motor1.configureMotor(Motor.REVERSE, 25);
+		System.out.println(motor1);
+		motor1.faster();
+		System.out.println(motor1);
+		motor1.faster();
+		System.out.println(motor1);
+		motor1.slower();
+		System.out.println(motor1);
+		motor1.slower();
+		motor1.configureMotor(Motor.REVERSE, 0);
 		System.out.println(motor1);
 		System.out.println("Finished");
 	}
