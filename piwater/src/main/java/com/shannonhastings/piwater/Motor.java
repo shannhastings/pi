@@ -63,11 +63,8 @@ public class Motor {
 
 		speed = Math.round(speed / POWER_INCREMENT) * POWER_INCREMENT;
 
-		if (getDirection() != direction) {
-			SoftPwm.softPwmWrite(getMotorPin1(), 0);
-			SoftPwm.softPwmWrite(getMotorPin2(), 0);
-			setDirection(STOPPED);
-			setPower(0);
+		if (getDirection() != direction && getDirection() != STOPPED) {
+			stop();
 			Thread.sleep(500);
 		}
 		if (direction == FORWARD) {
@@ -83,6 +80,13 @@ public class Motor {
 		} else {
 			System.out.println("MOTOR not going to change speed because it is stopped and not in a direction.");
 		}
+	}
+	
+	public synchronized void stop() throws InterruptedException {
+		SoftPwm.softPwmWrite(getMotorPin1(), 0);
+		SoftPwm.softPwmWrite(getMotorPin2(), 0);
+		setDirection(STOPPED);
+		setPower(0);
 	}
 
 	public synchronized void faster() throws InterruptedException {
