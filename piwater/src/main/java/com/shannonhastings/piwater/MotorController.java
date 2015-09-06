@@ -10,8 +10,6 @@ import com.pi4j.wiringpi.SoftPwm;
 
 public class MotorController {
 	
-
-
 	private GpioController gpio;
 	private static int MOTOR_1 = 1;
 	private static int MOTOR_2 = 2;
@@ -30,7 +28,6 @@ public class MotorController {
 	
 	public void init() throws InterruptedException {
 		System.out.println("Started");
-		
 		motor1 = new Motor();
 		motor1.setMotorNumber(MOTOR_1);
 		motor1.setMotorPin1(MOTOR_1_PIN_1);
@@ -41,7 +38,10 @@ public class MotorController {
 		motor2.setMotorPin1(MOTOR_2_PIN_1);
 		motor2.setMotorPin2(MOTOR_2_PIN_2);
 		System.out.println(motor2);
-		
+		System.out.println("Finished");
+	}
+	
+	protected void test () throws InterruptedException {
 		motor1.configureMotor(Motor.FORWARD, 25);
 		System.out.println(motor1);
 		motor1.faster();
@@ -69,12 +69,12 @@ public class MotorController {
 		motor1.slower();
 		motor1.configureMotor(Motor.REVERSE, 0);
 		System.out.println(motor1);
-		System.out.println("Finished");
 	}
 
 	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 		MotorController controller = new MotorController();
 		controller.init();
+		controller.test();
 	}
 	
 }
