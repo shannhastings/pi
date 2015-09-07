@@ -46,7 +46,7 @@ public class Motor {
 	}
 
 	public void setMotorPin1(int motorPin1) {
-		SoftPwm.softPwmCreate(motorPin1, 0, POWER_MAX);
+		SoftPwm.softPwmCreate(motorPin1,POWER_MIN, POWER_MAX);
 		this.motorPin1 = motorPin1;
 	}
 
@@ -55,7 +55,7 @@ public class Motor {
 	}
 
 	public void setMotorPin2(int motorPin2) {
-		SoftPwm.softPwmCreate(motorPin2, 0, POWER_MAX);
+		SoftPwm.softPwmCreate(motorPin2, POWER_MIN, POWER_MAX);
 		this.motorPin2 = motorPin2;
 	}
 
