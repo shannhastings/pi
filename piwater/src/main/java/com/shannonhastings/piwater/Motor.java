@@ -9,7 +9,7 @@ public class Motor {
 
 	private static int POWER_INCREMENT = -5;
 	private static int POWER_MIN = 0;
-	private static int POWER_MAX = 100;
+	private static int POWER_MAX = 200;
 
 	private int direction;
 	private int power;

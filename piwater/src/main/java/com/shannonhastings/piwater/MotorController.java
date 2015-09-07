@@ -62,7 +62,7 @@ public class MotorController {
 		motor1.configureMotor(Motor.FORWARD, 50);
 		System.out.println(motor1);
 		Thread.sleep(500);
-		motor1.configureMotor(Motor.FORWARD, 100);
+		motor1.configureMotor(Motor.FORWARD, 200);
 		System.out.println(motor1);
 		Thread.sleep(2000);
 		motor1.configureMotor(Motor.FORWARD, 0);
