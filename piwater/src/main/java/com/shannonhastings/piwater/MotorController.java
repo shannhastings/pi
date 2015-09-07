@@ -31,13 +31,15 @@ public class MotorController {
 		motor1 = new Motor();
 		motor1.setMotorNumber(MOTOR_1);
 		motor1.setMotorPin1(MOTOR_1_PIN_1);
+		System.out.println("PIN 1 SET");
 		motor1.setMotorPin2(MOTOR_1_PIN_2);
+		System.out.println("PIN_2_SET");
 		System.out.println(motor1);
-		motor2 = new Motor();
-		motor2.setMotorNumber(MOTOR_2);
-		motor2.setMotorPin1(MOTOR_2_PIN_1);
-		motor2.setMotorPin2(MOTOR_2_PIN_2);
-		System.out.println(motor2);
+//		motor2 = new Motor();
+//		motor2.setMotorNumber(MOTOR_2);
+//		motor2.setMotorPin1(MOTOR_2_PIN_1);
+//		motor2.setMotorPin2(MOTOR_2_PIN_2);
+//		System.out.println(motor2);
 		System.out.println("Finished");
 	}
 	
