@@ -13,10 +13,10 @@ public class MotorController {
 	private GpioController gpio;
 	private static int MOTOR_1 = 1;
 	private static int MOTOR_2 = 2;
-	private static int MOTOR_1_PIN_1 = 26;
-	private static int MOTOR_1_PIN_2 = 27;
-	private static int MOTOR_2_PIN_1 = 28;
-	private static int MOTOR_2_PIN_2 = 29;
+	private static int MOTOR_1_PIN_1 = 28;
+	private static int MOTOR_1_PIN_2 = 29;
+	private static int MOTOR_2_PIN_1 = 26;
+	private static int MOTOR_2_PIN_2 = 27;
 
 	private Motor motor1;
 	private Motor motor2;
