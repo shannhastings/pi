@@ -26,14 +26,14 @@ public class Servo
 		
 		while (true)
 		{
-			for (int i=0; i<100; i++)
-			{
-				myServo.high();
-				java.lang.Thread.sleep(0, 1000);
-				myServo.low();
-				java.lang.Thread.sleep(0, 19000);
-			}
-			
+//			for (int i=0; i<100; i++)
+//			{
+//				myServo.high();
+//				java.lang.Thread.sleep(0, 1000);
+//				myServo.low();
+//				java.lang.Thread.sleep(0, 19000);
+//			}
+//			
 			for (int i=0; i<100; i++)
 			{
 				myServo.high();
