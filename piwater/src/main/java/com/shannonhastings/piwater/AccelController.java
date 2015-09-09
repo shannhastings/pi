@@ -34,6 +34,7 @@ public class AccelController {
 	        ADXL345 adxl345 = new ADXL345(bus);
 
 	        adxl345.init(adxl345.X, Gyroscope.GET_RAW_VALUE_TRIGGER_READ);
+	        adxl345.recalibrateOffset();
 
 	        long now = System.currentTimeMillis();
 	        
