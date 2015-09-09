@@ -11,6 +11,10 @@ public class Servo {
 
 		GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(RaspiPin.GPIO_24);
 		pwm.setPwm(500);
+		Thread.sleep(1000);
+		pwm.setPwm(1000);
+		Thread.sleep(1000);
+		pwm.setPwm(1900);
 
 		// keep program running until user aborts (CTRL-C)
 		for (;;) {
