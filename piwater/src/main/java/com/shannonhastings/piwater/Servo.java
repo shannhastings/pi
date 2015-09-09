@@ -4,11 +4,12 @@ import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.GpioFactory;
 import com.pi4j.io.gpio.GpioPinPwmOutput;
 import com.pi4j.io.gpio.RaspiPin;
+import com.pi4j.wiringpi.Gpio;
 
 public class Servo {
 	public static void main(String[] args) throws InterruptedException {
+		Gpio.wiringPiSetup();
 		final GpioController gpio = GpioFactory.getInstance();
-
 		GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(RaspiPin.GPIO_24);
 		pwm.setPwm(500);
 		Thread.sleep(1000);
